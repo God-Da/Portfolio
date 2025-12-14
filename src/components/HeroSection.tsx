@@ -15,14 +15,14 @@ export function HeroSection() {
     return (
         <section
             id="home"
-            className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center relative overflow-hidden"
+            className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center relative overflow-hidden"
         >
             {/* Animated background elements */}
             <div className="absolute inset-0">
                 {[...Array(50)].map((_, i) => (
                     <motion.div
                         key={i}
-                        className="absolute w-1 h-1 bg-white/20 rounded-full"
+                        className="absolute w-1 h-1 bg-blue-400/20 rounded-full"
                         initial={{ opacity: 0 }}
                         animate={{
                             opacity: [0, 1, 0],
@@ -52,7 +52,7 @@ export function HeroSection() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.2 }}
-                        className="text-emerald-400 text-lg tracking-wider"
+                        className="text-blue-600 text-lg tracking-wider font-medium"
                     >
                         안녕하세요, 저는
                     </motion.p>
@@ -61,7 +61,7 @@ export function HeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
-                        className="text-5xl md:text-7xl text-white mb-6"
+                        className="text-5xl md:text-7xl text-gray-900 mb-6 font-bold"
                     >
                         강다연
                     </motion.h1>
@@ -70,7 +70,7 @@ export function HeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.6 }}
-                        className="text-2xl md:text-4xl text-gray-300 mb-8"
+                        className="text-2xl md:text-4xl text-gray-700 mb-8"
                     >
                         저는{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-blue-400">
@@ -86,7 +86,7 @@ export function HeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8 }}
-                        className="text-gray-400 text-lg max-w-2xl mx-auto mb-8"
+                        className="text-gray-600 text-lg max-w-2xl mx-auto mb-8"
                     >
                         Spring Boot와 React를 기반으로 서버 아키텍처와 사용자
                         중심의 인터페이스를 설계하며,AWS 환경에서
@@ -104,7 +104,7 @@ export function HeroSection() {
                     >
                         <Button
                             onClick={scrollToProjects}
-                            className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                            className="!bg-blue-400 hover:!bg-blue-600 text-white px-8 py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
                         >
                             My Project
                         </Button>
@@ -130,7 +130,7 @@ export function HeroSection() {
                                     initial={{ opacity: 0, scale: 0 }}
                                     animate={{ opacity: 1, scale: 1 }}
                                     transition={{ delay: 1.2 + index * 0.1 }}
-                                    className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-all duration-300 hover:scale-110"
+                                    className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 hover:scale-110 shadow-md"
                                 >
                                     <Icon className="w-5 h-5" />
                                 </motion.a>
@@ -148,7 +148,7 @@ export function HeroSection() {
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className="text-white/60"
+                        className="text-gray-400"
                     >
                         <ArrowDown className="w-6 h-6" />
                     </motion.div>

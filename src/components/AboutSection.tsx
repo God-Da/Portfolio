@@ -33,7 +33,7 @@ export function AboutSection() {
     ];
 
     return (
-        <section id="about" className="py-20 bg-gray-900">
+        <section id="about" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -42,10 +42,10 @@ export function AboutSection() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl text-white mb-6">
+                    <h2 className="text-4xl md:text-5xl text-gray-900 mb-6 font-bold">
                         About Me
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-blue-400 mx-auto"></div>
+                    <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -56,10 +56,10 @@ export function AboutSection() {
                         viewport={{ once: true }}
                         className="space-y-6"
                     >
-                        <h3 className="text-2xl text-white mb-4">
+                        <h3 className="text-2xl text-gray-900 mb-4 font-semibold">
                             의미 있는 디지털 경험을 만드는 것을 목표로,
                         </h3>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed">
                             웹 서비스의 구조와 동작 원리를 깊이 이해하는
                             개발자로 성장하고 있습니다. Spring Boot 기반의
                             백엔드 설계와 React를 활용한 UI 구현까지 직접
@@ -69,7 +69,7 @@ export function AboutSection() {
                             아이디어를 실제 동작하는 서비스로 구현하는 데
                             집중합니다.
                         </p>
-                        <p className="text-gray-300 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed">
                             주로 Spring Boot, React를 기반으로 웹 애플리케이션을
                             개발하며, AWS 환경에서 서버, 데이터베이스, 스토리지
                             연동을 경험했습니다. 필요에 따라 새로운 기술을
@@ -93,7 +93,7 @@ export function AboutSection() {
                             ].map((trait, index) => (
                                 <span
                                     key={trait}
-                                    className="px-4 py-2 bg-emerald-500/20 text-emerald-400 rounded-full text-sm border border-emerald-500/30"
+                                    className="px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm border border-blue-200"
                                 >
                                     {trait}
                                 </span>
@@ -119,14 +119,14 @@ export function AboutSection() {
                                 }}
                                 viewport={{ once: true }}
                             >
-                                <Card className="p-6 bg-black/50 border-white/10 hover:border-emerald-500/50 transition-all duration-300 group">
-                                    <div className="text-emerald-400 mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <Card className="p-6 bg-gray-50 border-gray-200 hover:border-blue-300 transition-all duration-300 group shadow-sm hover:shadow-md">
+                                    <div className="text-blue-600 mb-4 group-hover:scale-110 transition-transform duration-300">
                                         <feature.icon className="w-8 h-8" />
                                     </div>
-                                    <h4 className="text-white text-lg mb-2">
+                                    <h4 className="text-gray-900 text-lg mb-2 font-semibold">
                                         {feature.title}
                                     </h4>
-                                    <p className="text-gray-400 text-sm">
+                                    <p className="text-gray-600 text-sm">
                                         {feature.description}
                                     </p>
                                 </Card>

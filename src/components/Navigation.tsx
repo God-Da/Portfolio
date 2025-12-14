@@ -26,7 +26,7 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/80 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+        scrolled ? 'bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
@@ -35,7 +35,7 @@ export function Navigation() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-white text-xl font-medium"
+            className="text-gray-900 text-xl font-medium"
           >
             &lt;DevPortfolio /&gt;
           </motion.div>
@@ -48,7 +48,7 @@ export function Navigation() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
                 onClick={() => scrollToSection(item)}
-                className="text-gray-300 hover:text-white transition-colors duration-200 capitalize"
+                className="text-gray-600 hover:text-gray-900 transition-colors duration-200 capitalize"
               >
                 {item}
               </motion.button>

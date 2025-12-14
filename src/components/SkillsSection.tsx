@@ -33,7 +33,7 @@ export function SkillsSection() {
                     level: 79,
                     color: "from-green-500 to-green-700",
                 },
-                { name: "Java", level: 80, color: "from-red-400 to-red-600" },
+                { name: "Java", level: 80, color: "from-gray-400 to-gray-600" },
                 {
                     name: "Node.js",
                     level: 71,
@@ -57,7 +57,7 @@ export function SkillsSection() {
                 {
                     name: "MariaDB",
                     level: 85,
-                    color: "from-sky-400 to-sky-600",
+                    color: "from-sky-600 to-blue-400",
                 },
                 {
                     name: "Oracle DB",
@@ -79,11 +79,11 @@ export function SkillsSection() {
                     level: 85,
                     color: "from-gray-400 to-gray-600",
                 },
-                // {
-                //     name: "Docker",
-                //     level: 60,
-                //     color: "from-blue-600 to-blue-800",
-                // },
+                {
+                    name: "Figma",
+                    level: 83,
+                    color: "from-blue-600 to-blue-800",
+                },
             ],
         },
     ];
@@ -95,7 +95,7 @@ export function SkillsSection() {
     ];
 
     return (
-        <section id="skills" className="py-20 bg-black">
+        <section id="skills" className="py-20 bg-gray-50">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Section Title */}
                 <motion.div
@@ -105,11 +105,11 @@ export function SkillsSection() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl text-white mb-6">
+                    <h2 className="text-4xl md:text-5xl text-gray-900 mb-6 font-bold">
                         Skills & Technologies
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-pink-400 mx-auto"></div>
-                    <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+                    <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto"></div>
+                    <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
                         프로젝트 경험을 바탕으로, 이론적 이해를 함께 쌓아온
                         기술들입니다.
                     </p>
@@ -128,8 +128,8 @@ export function SkillsSection() {
                             }}
                             viewport={{ once: true }}
                         >
-                            <Card className="p-6 bg-gray-900/50 border-white/10 backdrop-blur-sm">
-                                <h3 className="text-xl text-white mb-6 text-center">
+                            <Card className="p-6 bg-white border-gray-200 shadow-sm">
+                                <h3 className="text-xl text-gray-900 mb-6 text-center font-semibold">
                                     {category.title}
                                 </h3>
                                 <div className="space-y-4">
@@ -139,14 +139,14 @@ export function SkillsSection() {
                                             className="space-y-2"
                                         >
                                             <div className="flex justify-between items-center">
-                                                <span className="text-gray-300 text-sm">
+                                                <span className="text-gray-700 text-sm font-medium">
                                                     {skill.name}
                                                 </span>
-                                                <span className="text-gray-400 text-xs">
+                                                <span className="text-gray-500 text-xs">
                                                     {skill.level}%
                                                 </span>
                                             </div>
-                                            <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                                            <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                                                 <motion.div
                                                     initial={{ width: 0 }}
                                                     whileInView={{
@@ -176,8 +176,10 @@ export function SkillsSection() {
                     viewport={{ once: true }}
                     className="mt-16 text-center"
                 >
-                    <h3 className="text-2xl text-white mb-8">Certifications</h3>
-                    <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
+                    <h3 className="text-2xl text-gray-900 mb-8 font-semibold">
+                        Certifications
+                    </h3>
+                    <div className="flex flex-wrap justify-center items-center gap-8">
                         {certifications.map((cert, index) => (
                             <motion.span
                                 key={cert}
@@ -188,7 +190,7 @@ export function SkillsSection() {
                                     duration: 0.3,
                                 }}
                                 viewport={{ once: true }}
-                                className="px-6 py-3 bg-white/5 text-gray-300 rounded-lg border border-white/10 text-sm hover:bg-white/10 transition-all duration-300"
+                                className="px-6 py-3 bg-white text-gray-700 rounded-lg border border-gray-200 text-sm hover:bg-blue-50 hover:border-blue-300 hover:text-blue-700 transition-all duration-300 shadow-sm"
                             >
                                 {cert}
                             </motion.span>

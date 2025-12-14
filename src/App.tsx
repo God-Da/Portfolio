@@ -7,9 +7,9 @@ import { ContactSection } from "./components/ContactSection";
 
 export default function App() {
   return (
-    <div className="dark min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900 relative">
       <Navigation />
-      <main>
+      <main className="relative">
         <HeroSection />
         <AboutSection />
         <SkillsSection />

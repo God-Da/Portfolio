@@ -87,7 +87,7 @@ export function ProjectsSection() {
     const otherProjects = projects.filter((p) => !p.featured);
 
     return (
-        <section id="projects" className="py-20 bg-gray-900">
+        <section id="projects" className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -96,11 +96,11 @@ export function ProjectsSection() {
                     viewport={{ once: true }}
                     className="text-center mb-16"
                 >
-                    <h2 className="text-4xl md:text-5xl text-white mb-6">
+                    <h2 className="text-4xl md:text-5xl text-gray-900 mb-6 font-bold">
                         My Projects
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-emerald-400 to-blue-400 mx-auto"></div>
-                    <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+                    <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                    <p className="text-gray-600 mt-6 max-w-2xl mx-auto">
                         다양한 웹 애플리케이션을 제작하기 위해 <br /> React,
                         JavaScript, Spring Boot, Python으로 만든 프로젝트입니다.
                     </p>
@@ -116,20 +116,20 @@ export function ProjectsSection() {
                             transition={{ delay: index * 0.2, duration: 0.8 }}
                             viewport={{ once: true }}
                         >
-                            <Card className="group bg-black/50 border-white/10 overflow-hidden hover:border-emerald-500/50 transition-all duration-500">
+                            <Card className="group bg-white border-gray-200 overflow-hidden hover:border-blue-300 transition-all duration-500 shadow-sm hover:shadow-md">
                                 <div className="relative overflow-hidden">
                                     <ImageWithFallback
                                         src={project.image}
                                         alt={project.title}
                                         className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                                     />
-                                    <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300"></div>
+                                    <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-all duration-300"></div>
                                     <div className="absolute top-4 right-4 flex space-x-2">
                                         <motion.a
                                             href={project.github}
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.95 }}
-                                            className="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-all duration-300"
+                                            className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md"
                                         >
                                             <Github className="w-5 h-5" />
                                         </motion.a>
@@ -137,7 +137,7 @@ export function ProjectsSection() {
                                             href={project.live}
                                             whileHover={{ scale: 1.1 }}
                                             whileTap={{ scale: 0.95 }}
-                                            className="w-10 h-10 bg-black/70 rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-all duration-300"
+                                            className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-md"
                                         >
                                             <ExternalLink className="w-5 h-5" />
                                         </motion.a>
@@ -145,17 +145,17 @@ export function ProjectsSection() {
                                 </div>
 
                                 <div className="p-6">
-                                    <h3 className="text-xl text-white mb-3 group-hover:text-emerald-400 transition-colors duration-300">
+                                    <h3 className="text-xl text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300 font-semibold">
                                         {project.title}
                                     </h3>
-                                    <p className="text-gray-400 mb-4 leading-relaxed">
+                                    <p className="text-gray-600 mb-4 leading-relaxed">
                                         {project.description}
                                     </p>
                                     <div className="flex flex-wrap gap-2">
                                         {project.technologies.map((tech) => (
                                             <span
                                                 key={tech}
-                                                className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm border border-emerald-500/30"
+                                                className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm border border-blue-200"
                                             >
                                                 {tech}
                                             </span>
@@ -175,7 +175,7 @@ export function ProjectsSection() {
                     viewport={{ once: true }}
                     className="mb-8"
                 >
-                    <h3 className="text-2xl text-white text-center mb-8">
+                    <h3 className="text-2xl text-gray-900 text-center mb-8 font-semibold">
                         Other Projects
                     </h3>
                 </motion.div>
@@ -189,24 +189,24 @@ export function ProjectsSection() {
                             transition={{ delay: index * 0.1, duration: 0.6 }}
                             viewport={{ once: true }}
                         >
-                            <Card className="group bg-black/30 border-white/10 hover:border-white/30 transition-all duration-300 h-full">
+                            <Card className="group bg-gray-50 border-gray-200 hover:border-blue-300 transition-all duration-300 h-full shadow-sm hover:shadow-md">
                                 <div className="relative overflow-hidden">
                                     <ImageWithFallback
                                         src={project.image}
                                         alt={project.title}
                                         className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                                     />
-                                    <div className="absolute inset-0 bg-black/40"></div>
+                                    <div className="absolute inset-0 bg-black/10"></div>
                                     <div className="absolute top-3 right-3 flex space-x-2">
                                         <a
                                             href={project.github}
-                                            className="w-8 h-8 bg-black/70 rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-all duration-300"
+                                            className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm"
                                         >
                                             <Github className="w-4 h-4" />
                                         </a>
                                         <a
                                             href={project.live}
-                                            className="w-8 h-8 bg-black/70 rounded-full flex items-center justify-center text-white hover:bg-emerald-500 transition-all duration-300"
+                                            className="w-8 h-8 bg-white/90 rounded-full flex items-center justify-center text-gray-700 hover:bg-blue-600 hover:text-white transition-all duration-300 shadow-sm"
                                         >
                                             <ExternalLink className="w-4 h-4" />
                                         </a>
@@ -214,10 +214,10 @@ export function ProjectsSection() {
                                 </div>
 
                                 <div className="p-4">
-                                    <h4 className="text-lg text-white mb-2 group-hover:text-emerald-400 transition-colors duration-300">
+                                    <h4 className="text-lg text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-300 font-semibold">
                                         {project.title}
                                     </h4>
-                                    <p className="text-gray-400 text-sm mb-3 line-clamp-3">
+                                    <p className="text-gray-600 text-sm mb-3 line-clamp-3">
                                         {project.description}
                                     </p>
                                     <div className="flex flex-wrap gap-1">
@@ -226,7 +226,7 @@ export function ProjectsSection() {
                                             .map((tech) => (
                                                 <span
                                                     key={tech}
-                                                    className="px-2 py-1 bg-gray-700 text-gray-300 rounded text-xs"
+                                                    className="px-2 py-1 bg-white text-gray-600 rounded text-xs border border-gray-200"
                                                 >
                                                     {tech}
                                                 </span>
@@ -247,7 +247,7 @@ export function ProjectsSection() {
                 >
                     <Button
                         variant="outline"
-                        className="border-emerald-500/50 text-emerald-400 hover:bg-emerald-500/10 px-8 py-3"
+                        className="border-blue-500 text-blue-600 hover:bg-blue-50 px-8 py-3"
                     >
                         View All Projects
                     </Button>
